@@ -92,17 +92,13 @@ export const helloInit = () => {
   }
   ElMessage({
     dangerouslyUseHTMLString: true,
-    message: `<strong>${hello}</strong> 欢迎来到我的主页`,
+    message: `<strong>${hello}</strong>`,
   });
 };
 
 // 默哀模式
 const anniversaries = {
-  4.4: "清明节",
-  5.12: "汶川大地震纪念日",
-  7.7: "中国人民抗日战争纪念日",
-  9.18: "九·一八事变纪念日",
-  12.13: "南京大屠杀死难者国家公祭日",
+  6.4: "64",
 };
 export const checkDays = () => {
   const myDate = new Date();
@@ -130,14 +126,14 @@ export const siteDateStatistics = (startDate) => {
   const differenceInMonths = differenceInDays / 30;
   const differenceInYears = differenceInMonths / 12;
   if (differenceInYears >= 1) {
-    return `本站已经苟活了 ${Math.floor(differenceInYears)} 年 ${Math.floor(
+    return `本站已經存活了 ${Math.floor(differenceInYears)} 年 ${Math.floor(
       differenceInMonths % 12,
     )} 月 ${Math.round(differenceInDays % 30)} 天`;
   } else if (differenceInMonths >= 1) {
-    return `本站已经苟活了 ${Math.floor(differenceInMonths)} 月 ${Math.round(
+    return `本本站已經存活了 ${Math.floor(differenceInMonths)} 月 ${Math.round(
       differenceInDays % 30,
     )} 天`;
   } else {
-    return `本站已经苟活了 ${Math.round(differenceInDays)} 天`;
+    return `本站已經存活了 ${Math.round(differenceInDays)} 天`;
   }
 };
